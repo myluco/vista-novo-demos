@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-8">
+    <div id='chart' style='width: 600px; height: 300px;'></div>
+    <%#= render_chart @timeline, 'chart' %>
+    <%= high_chart('chart', @timeline) %>
+  </div> 
+  <div class="col-md-4">
+    <%= form_for @blood_pressure, :html => { :class => 'form-horizontal' } do |f| %>
+      <fieldset>
+        <legend>New Blood Pressure Reading</legend>
+        <div class="control-group">
+          <%= f.label :systolic, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :systolic, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="control-group">
+          <%= f.label :diastolic, :class => 'control-label' %>
+          <div class="controls">
+            <%= f.text_field :diastolic, :class => 'text_field' %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <%= f.submit "Submit", :class => 'btn btn-primary' %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
