@@ -16,9 +16,6 @@ VistA Novo, the Test Stub, and the demo application all need to be running on di
 VistA Novo running at port 3000 (the default) and the Test Stub at port 3001, you can start the demo 
 application:
 
-	bundle exec rails s
+	bundle exec rails s -p 3002
 
-For more information on how the demo application handles URLs, run:
-
-    rake routes
-    
+Once the server has fired up, point your browser to http://localhost:3002 and you should be good to go!
